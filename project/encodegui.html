@@ -1,0 +1,82 @@
+<!--Copyright (C) 2020-2023 DaGoose-->
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="DaGoose" />
+        <title>DaGoose - EncodeGUI</title>
+        <link rel="icon" type="image/x-icon" href="../assets/favicon.ico" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <link href="../css/styles.css" rel="stylesheet" />
+    </head>
+    <body class="d-flex flex-column">
+        <main class="flex-shrink-0">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container px-5">
+                    <a class="navbar-brand" href="../index" >
+                        <img src="../assets/dagoose.png" height="45" class="d-inline-block align-middle mr-2">
+					</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <li class="nav-item"><a class="nav-link" href="../index">Home</a></li>
+							<li class="nav-item"><a class="nav-link" href="../projects">Projects</a></li>
+							<li class="nav-item"><a class="nav-link" href="https://shop.dagooseyt.com">Merch</a></li>
+                            <li class="nav-item"><a class="nav-link" href="../about">About</a></li>
+                            <li class="nav-item"><a class="nav-link" href="../contact">Contact</a></li>
+							<li class="nav-item"><a class="nav-link" href="../donate">Donate ❤️</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+			<section class="bg-white py-5">
+                <div class="container px-5">
+                    <div class="mb-5">
+                        <h1 class="text-center fw-bolder my-5">EncodeGUI</h1>
+                        <div class="row gx-5 justify-content-center">
+                            <div class="col-lg-6 col-xl-6"><img class="shadow-lg img-fluid rounded-3 my-3" src="../assets/egui_lg.png"/></div>
+                        </div>
+                        <p class="lead fw-normal my-5 mb-0"> 
+                            A free and open source video transcoder GUI that utilizes state of the art AI tools and filters for an unparalleled video encode. It has ~14,000 downloads (Feb 4, 2023) and is growing by the hundreds every week. The latest versions are reserved to paid patrons via a monthly subscription.<br />
+                            Source code and technical details: <a href="https://github.com/DaGooseYT/EncodeGUI">https://github.com/DaGooseYT/EncodeGUI</a><br />
+                            Official video tutorials: <a href="https://youtube.com/playlist?list=PLDv6vnHjQp9c4J3hKlTn3T1DAAijtrDfh">https://youtube.com/playlist</a><br />
+                            Official website: <a href="https://encodegui.com">https://encodegui.com</a>
+                        </p>
+                        <p class="lead fw-normal my-5 mb-0"> 
+                            <strong>Background:</strong><br />
+                            FrameGUI has already been released for around eight months prior to the release of EncodeGUI. While FrameGUI was good at what it did, it lacked AI tools and filters that competing software featured, and the tool set was limited as far as general encoding options. Any already existing free AI media encoding tools were decent, but had lousy general encoding settings or were too difficult to use. With all of this in mind, I have spent countless hours learning Qt while developing EncodeGUI to correct the faults of other free and open source media encoding software.<br /><br />
+                            <strong>Objectives:</strong><br />
+                            Since nearly all other open-source video encoding software consists of lousy encoding options, EncodeGUI features a choice of six video codecs to select from as well as eight different audio codecs and 10 output video containers. All of these codecs in EncodeGUI provided comprehensive encoding settings while keeping the user interface clean and easy to understand.<br />
+                            Nearly any video is supported as an input.<br />
+                            The latest and greatest AI tools and filters were added as better means for video filtering. However, AI tools are more resource demanding and therefore require mid-high end graphics hardware to use effectively.<br />
+                            EncodeGUI features VapourSynth filtering which is based on the Python framework. A lot of the AI tools and filters have support for VapourSynth, but using the VapourSynth API requires knowledge of the Python programming language which makes it difficult to use for the average user. I knew that the user base of EncodeGUI would not know how to code in Python, so there are functions in EncodeGUI that will generate a VS-Python script on the basis of EncodeGUI user configuration settings.<br /><br />
+                            <strong>Challenges:</strong><br />
+                            Getting some of the dependencies to work with EncodeGUI was a huge struggle. EncodeGUI uses the VapourSynth video filtering API which is a wrapper around Python. When it works, it's great. However, if an issue arises, it is near impossible to determine exactly what the problem is because the errors thrown (especially through command piping) are basic and do not provide a stack trace or relevant data to help solve the problem. At times, a user will report an issue and no error message from VapourSynth is provided at all!<br />
+                            Learning the Qt framework was difficult for me initially. I picked up the C/C++ syntax quickly, but I simply had difficulties understanding the SIGNALS and SLOTS, and multi-threading in general. Just like with FrameGUI and C#, I have learned Qt during the development of EncodeGUI and later versions of FrameGUI.<br /><br />
+                            <strong>Other notes:</strong><br />
+                            Although not published in the source code, the <a href="https://encodegui.com">website for EncodeGUI</a> consists of PHP scripting code and a database for a Patreon verification system. The corresponding code to signal the API is in the early access setup installer files.
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="bg-dark py-4 mt-auto">
+            <div class="container px-5">
+                <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+                    <div class="col-auto"><div class="small m-0 text-white">Copyright &copy; DaGoose 2020-2023</div></div>
+                    <div class="col-auto">
+                        <a class="fs-5 px-2 link-light" href="https://www.youtube.com/@DaGoose"><i class="bi-youtube"></i></a>
+                        <a class="fs-5 px-2 link-light" href="https://github.com/DaGooseYT"><i class="bi-github"></i></a>
+                        <a class="fs-5 px-2 link-light" href="mailto:goose@dagooseyt.com"><i class="bi-envelope-fill"></i></a>
+                        <a class="fs-5 px-2 link-light" href="https://discord.gg/PmcbXJVBNu"><i class="bi-discord"></i></a>
+                        <a class="fs-5 px-2 link-light" href="https://twitter.com/dagooseyt"><i class="bi-twitter"></i></a>
+                        <a class="fs-5 px-2 link-light" href="https://instagram.com/DaGooseYT"><i class="bi-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="js/scripts.js"></script>
+    </body>
+</html>

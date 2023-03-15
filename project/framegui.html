@@ -1,0 +1,81 @@
+<!--Copyright (C) 2020-2023 DaGoose-->
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="DaGoose" />
+        <title>DaGoose - FrameGUI</title>
+        <link rel="icon" type="image/x-icon" href="../assets/favicon.ico" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <link href="../css/styles.css" rel="stylesheet" />
+    </head>
+    <body class="d-flex flex-column">
+        <main class="flex-shrink-0">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container px-5">
+                    <a class="navbar-brand" href="../index" >
+                        <img src="../assets/dagoose.png" height="45" class="d-inline-block align-middle mr-2">
+					</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <li class="nav-item"><a class="nav-link" href="../index">Home</a></li>
+							<li class="nav-item"><a class="nav-link" href="../projects">Projects</a></li>
+							<li class="nav-item"><a class="nav-link" href="https://shop.dagooseyt.com">Merch</a></li>
+                            <li class="nav-item"><a class="nav-link" href="../about">About</a></li>
+                            <li class="nav-item"><a class="nav-link" href="../contact">Contact</a></li>
+							<li class="nav-item"><a class="nav-link" href="../donate">Donate ❤️</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+			<section class="bg-white py-5">
+                <div class="container px-5">
+                    <div class="mb-5">
+                        <h1 class="text-center fw-bolder my-5">FrameGUI</h1>
+                        <div class="row gx-5 justify-content-center">
+                            <div class="col-lg-6 col-xl-6"><img class="shadow-lg img-fluid rounded-3 my-3" src="../assets/fgui_lg.png"/></div>
+                        </div>
+                        <p class="lead fw-normal my-5 mb-0"> 
+                            A very user-friendly, open source video encoding tool consisting of AI tools and filters. Versions 2.0.0 and newer are based on the more comprehensive EncodeGUI application. FrameGUI has ~60,000 downloads and is growing by the thousands every week.<br />
+                            Source code and technical details: <a href="https://github.com/DaGooseYT/FrameGUI">https://github.com/DaGooseYT/FrameGUI</a><br />
+                            Official video tutorials: <a href="https://youtube.com/playlist?list=PLDv6vnHjQp9enb_RhpMpqE3EgLllHrUJH">https://youtube.com/playlist</a><br />
+                            Official website: <a href="https://encodegui.com">https://encodegui.com</a>
+                        </p>
+                        <p class="lead fw-normal my-5 mb-0"> 
+                            <strong>Background:</strong><br />
+                            Initially on the DaGoose YouTube channel, I created video tutorials of software that were created by other developers. Although the viewers of the videos thought the tutorials were helpful, if a problem arised, there would simply be no way for me to diagnose the issue as the software was closed-source. Since I was unable to help viewers with problems, It was necessary for me to start developing my own software with similar tool sets as the closed-source software so that I can provide better support to users and have complete control over development.
+                            In Spring 2021, I had taught myself the C# programming language as I wanted to use Windows Forms to develop the initial version of FrameGUI. I learned C# while I was developing FrameGUI.<br /><br />
+                            <strong>Objectives:</strong><br />
+                            The biggest priority for FrameGUI was to allow the user to create encoding configurations as quickly as possible and user-friendly. One pattern that I have discovered over the years is that open-source software generally isn't user-friendly or understandable to most. Only commercial software appeared to achieve a user-friendly interface, but usually came at a hefty financial cost. FrameGUI was designed with a user-friendly interface in mind, while still being free and open-source.<br />
+                            Initially, I wanted FrameGUI to have wide support across all different forms of computer hardware. SVPFlow, a frame interpolation plugin was used as it allows users to interpolate videos while being able to work fast even on some of the slowest computers. However, the SVPFlow plugin does not use AI and therefore the interpolation quality was not as great. The AI tools and filters were not introduced to FrameGUI until v2.0.0.<br /><br />
+                            <strong>Challenges:</strong><br />
+                            Learning C# and just object oriented languages in general were initially a struggle for me. Learning the general logic behind object oriented languages is really the biggest barrier from learning most programming languages. However, with dedication I picked up the concepts in some time.<br />
+                            Windows Forms is a dead user interface framework and therefore the FrameGUI interface did not appear well on high-resolution screens. In FrameGUI v2.0.0 and newer, the Qt framework was used which provides a much cleaner interface and support for high-resolution screens.<br /><br />
+                            <strong>Other notes:</strong><br />
+                            FrameGUI was never planned to be put back in development as I felt it would cannibalize the more comprehensive EncodeGUI encoding tool. Regardless, user demand convinced me to bring back FrameGUI and introduce a completely new layout and tools. Since v2.0.0 of FrameGUI, the layout has been designed to be even more user-friendly specifically for users who have no prior video encoding experience and want to take advantage of popular AI video filters. FrameGUI v2.0.0 and newer are built around the Qt framework using the C++ programming language.
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="bg-dark py-4 mt-auto">
+            <div class="container px-5">
+                <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+                    <div class="col-auto"><div class="small m-0 text-white">Copyright &copy; DaGoose 2020-2023</div></div>
+                    <div class="col-auto">
+                        <a class="fs-5 px-2 link-light" href="https://www.youtube.com/@DaGoose"><i class="bi-youtube"></i></a>
+                        <a class="fs-5 px-2 link-light" href="https://github.com/DaGooseYT"><i class="bi-github"></i></a>
+                        <a class="fs-5 px-2 link-light" href="mailto:goose@dagooseyt.com"><i class="bi-envelope-fill"></i></a>
+                        <a class="fs-5 px-2 link-light" href="https://discord.gg/PmcbXJVBNu"><i class="bi-discord"></i></a>
+                        <a class="fs-5 px-2 link-light" href="https://twitter.com/dagooseyt"><i class="bi-twitter"></i></a>
+                        <a class="fs-5 px-2 link-light" href="https://instagram.com/DaGooseYT"><i class="bi-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="js/scripts.js"></script>
+    </body>
+</html>

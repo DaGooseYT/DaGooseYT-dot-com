@@ -1,0 +1,88 @@
+<!--Copyright (C) 2020-2023 DaGoose-->
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="DaGoose" />
+        <title>DaGoose - SMT-PBTS</title>
+        <link rel="icon" type="image/x-icon" href="../assets/favicon.ico" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <link href="../css/styles.css" rel="stylesheet" />
+    </head>
+    <body class="d-flex flex-column">
+        <main class="flex-shrink-0">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container px-5">
+                    <a class="navbar-brand" href="../index" >
+                        <img src="../assets/dagoose.png" height="45" class="d-inline-block align-middle mr-2">
+					</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <li class="nav-item"><a class="nav-link" href="../index">Home</a></li>
+							<li class="nav-item"><a class="nav-link" href="../projects">Projects</a></li>
+							<li class="nav-item"><a class="nav-link" href="https://shop.dagooseyt.com">Merch</a></li>
+                            <li class="nav-item"><a class="nav-link" href="../about">About</a></li>
+                            <li class="nav-item"><a class="nav-link" href="../contact">Contact</a></li>
+							<li class="nav-item"><a class="nav-link" href="../donate">Donate ❤️</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+			<section class="bg-white py-5">
+                <div class="container px-5">
+                    <div class="mb-5">
+                        <h2 class="text-center fw-bolder my-5">Surface Mount Technology - Portable Bluetooth Speaker (SMT-PBTS)</h2>
+                        <div class="row gx-5">
+                            <div class="col-lg-6 col-xl-6"><img class="shadow-lg img-fluid rounded-3 my-3" src="../assets/smtpbts_fr.png"/></div>
+                            <div class="col-lg-6 col-xl-6"><img class="shadow-lg img-fluid rounded-3 my-3" src="../assets/smtpbts_bt.png"/></div>
+                        </div>
+                        <p class="lead fw-normal mb-0 my-5"> 
+                            SMT-PBTS is an open source, Hi-Fi Bluetooth speaker PCB designed for the smallest, best sounding portable Bluetooth speaker applications. About the size of a credit card, it features multi-channel configurations for an immersive soundstage, a programmable audio DSP, Bluetooth v5.0 technology with external antenna support, 24-bit HI-RES audio support, and more.<br />
+                            Source code and technical details: <a href="https://github.com/DaGooseYT/SMT-PBTS">https://github.com/DaGooseYT/SMT-PBTS</a>
+                        </p>
+                        <p class="lead fw-normal my-5 mb-0"> 
+                            <strong>Background:</strong><br />
+                            I have purchased numerous portable Bluetooth speakers in the past only to be disappointed in their fidelity. Unfortunately, many manufacturers cut corners for costs that greatly impact the acoustical quality of the speaker and the application as a whole. These cost-saving methods include rolling off the bass at a higher frequency for "longer" battery life, using cheap ceramic capacitors in audio decoupling filters, using highly compressed and terrible Bluetooth audio codecs such as SBC, and using Class D amplifiers to drive tweeters for the highest efficiency. 
+                            Regardless of the amount of corner-cutting that portable Bluetooth speaker manufacturers appear to make, their products are often ridiculously expensive and are still constructed with cheap materials. With these problems in mind, I took it upon myself to construct a small, high fidelity yet efficient Bluetooth speaker circuit board that corrects the faults of nearly all commercial Bluetooth speaker products.<br /><br />
+                            <strong>Objectives:</strong><br />
+                            It was important to make the PCB as small as possible primarily because the speaker enclosure it will be housed in will also be small and portable. For revision three of SMT-PBTS, I selected PCB dimensions of 95mm X 60mm and attempted to place as many components on the board as possible. Both sides of the PCB were utilized for placing components.<br />
+                            I was unable to provide any means for the board to accept wired auxiliary inputs, which is the most optimal method for a high fidelity audio source. However, the 24-bit audio support via Qualcomm aptx-HD in the CSR8675 was implemented to compensate for that by providing a similar to wired quality listening experience. 
+                            On top of the aptx-HD support, SMT-PBTS also supports SBC, AAC, and aptx-LL Bluetooth codecs as alternative means for music streaming.<br />
+                            SMT-PBTS also had to output up to 35W of unclipped audio power per channel to the bass drivers to allow maximum performance. Two Class D amplifier chips were used as they are highly efficient and do not require bulky heat sinks, or in this case no heat sinks at all. However, for the tweeter drivers, small Class AB amplifiers were used as linear amplification of an audio source sounds more natural than their Class D counterparts, where Class D amplifiers implement pulse width modulation for amplification. 
+                            Although Class AB amplifiers are not near as efficient as Class D, they typically require less external components which is a must for the small PCB dimensions requirement. The combination ("hybrid") of the Class AB and the Class D amplifiers gives the overall application superior audio quality while still maintaining decent power efficiency.<br />
+                            The components used for SMT-PBTS are some of the highest quality in the world. The OPA134 series of op-amps are used which are regarded as the highest quality op-amps for audio processing in the world currently. Additionally, all of the capacitors used for the audio decoupling filters require the Panasonic acrylic resin series of film capacitors. While ceramic capacitors are attractive to most manufacturers due to their small size, high capacity, and low cost, they are generally inconsistent with maintaining their rated capacitance at varying voltage levels and are microphonic when used for audio decoupling purposes, resulting in added noise to the audio signal.
+                            Film capacitors for use with audio decoupling and filtering are most optimal because they do not suffer from the disadvantageous characteristics as ceramic capacitors with regards to audio. However, they are much bigger in size and are much more costly than the ceramic capacitor counterparts.<br />
+                            Since most stereo mixes typically have an imbalance between the out-of-phase and in-phase musical content, there is an on-board circuit that has been implemented to split the phase and then boost the out-of-phase content by around +3dB. The result is a more immersive soundstage, since most instruments are panned to the left and right in a stereo mix.<br />
+                            Although not specific to the SMT-PBTS circuit board, a 14.4V lithium ion battery pack with the highest capacity cells available should be used as a power source to account for the speaker enclosure efficiency limitations. The associated battery management system should be able to output up to 8A of current.<br /><br />
+                            <strong>Challenges:</strong><br />
+                            The associated speaker enclosure designed for SMT-PBTS is very small and is port tuned to reproduce bass frequencies as low as 35Hz. In comparison, the average 12-inch subwoofer would have a tuning frequency of around 30-35Hz making the frequency response characteristics for the SMT-PBTS enclosure design to be extremely impressive. It was also designed with medium density fiber wood as it's one of the most resonant enclosure materials for speaker cabinets. While it's true that no other speaker in its class is able to achieve 35Hz on the low end frequency response, there is a huge trade-off. According to Hoffman's Iron Law of speaker enclosure design, you can select two of three parameters, but will have to compromise the third. The parameters being small enclosure size, high efficiency, and deep bass reproduction. 
+                            SMT-PBTS heavily focuses on deep bass reproduction and small enclosure size which leaves the third parameter, high efficiency, out of the equation. This is why the PCB for SMT-PBTS had to be the smallest possible so that the absolute most enclosure volume can be taken advantage of to produce the deepest bass and the most efficiency possible. While the speaker enclosure for SMT-PBTS is severely inefficient, it is compensated through the use of small yet high power speaker drivers with huge excursion capabilities, powerful and efficient Class D amplifiers to drive the bass speakers, and the largest capacity battery cells for their class being used in the battery pack.<br />
+                            Although SMT-PBTS has very low total harmonic distortion of ~0.05%, there is some noise in the circuit. The boost converters for the Class D amplifier chips produces around 400mV of ripple along with the BTM875 Bluetooth module injecting digital noise to the ground net. Both sources of noise have been reduced by isolating the BTM875 Bluetooth module to its own ground net using a DC-DC isolator and by isolating the boost converters strictly to the Class D amplifier chips only as they have built in supply voltage ripple rejection. Regardless of the efforts, there is still some noise but it is inaudible when listening from more than a foot away from the speaker.<br /><br />
+                            <strong>Other notes:</strong><br />
+                            SMT-PBTS has been in development since the year 2021 and is still to this day. In each revision, DaGoose works to make the PCB smaller, more efficient, and sound better. For revision three alone, it took nearly 60 hours to develop the PCB, schematic files, and perform tests.
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="bg-dark py-4 mt-auto">
+            <div class="container px-5">
+                <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+                    <div class="col-auto"><div class="small m-0 text-white">Copyright &copy; DaGoose 2020-2023</div></div>
+                    <div class="col-auto">
+                        <a class="fs-5 px-2 link-light" href="https://www.youtube.com/@DaGoose"><i class="bi-youtube"></i></a>
+                        <a class="fs-5 px-2 link-light" href="https://github.com/DaGooseYT"><i class="bi-github"></i></a>
+                        <a class="fs-5 px-2 link-light" href="mailto:goose@dagooseyt.com"><i class="bi-envelope-fill"></i></a>
+                        <a class="fs-5 px-2 link-light" href="https://discord.gg/PmcbXJVBNu"><i class="bi-discord"></i></a>
+                        <a class="fs-5 px-2 link-light" href="https://twitter.com/dagooseyt"><i class="bi-twitter"></i></a>
+                        <a class="fs-5 px-2 link-light" href="https://instagram.com/DaGooseYT"><i class="bi-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="js/scripts.js"></script>
+    </body>
+</html>

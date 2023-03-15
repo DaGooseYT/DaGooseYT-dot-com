@@ -1,0 +1,82 @@
+<!--Copyright (C) 2020-2023 DaGoose-->
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="DaGoose" />
+        <title>DaGoose - DaGoose Box</title>
+        <link rel="icon" type="image/x-icon" href="../assets/favicon.ico" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <link href="../css/styles.css" rel="stylesheet" />
+    </head>
+    <body class="d-flex flex-column">
+        <main class="flex-shrink-0">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container px-5">
+                    <a class="navbar-brand" href="../index" >
+                        <img src="../assets/dagoose.png" height="45" class="d-inline-block align-middle mr-2">
+					</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <li class="nav-item"><a class="nav-link" href="../index">Home</a></li>
+							<li class="nav-item"><a class="nav-link" href="../projects">Projects</a></li>
+							<li class="nav-item"><a class="nav-link" href="https://shop.dagooseyt.com">Merch</a></li>
+                            <li class="nav-item"><a class="nav-link" href="../about">About</a></li>
+                            <li class="nav-item"><a class="nav-link" href="../contact">Contact</a></li>
+							<li class="nav-item"><a class="nav-link" href="../donate">Donate ❤️</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+			<section class="bg-white py-5">
+                <div class="container px-5">
+                    <div class="mb-5">
+                        <h1 class="text-center fw-bolder my-5">DaGoose Box</h1>
+                        <div class="row gx-5">
+                            <div class="col-lg-6 col-xl-6"><img class="shadow-lg img-fluid rounded-3 my-3" src="../assets/dgbox.png"/></div>
+                            <div class="col-lg-6 col-xl-6"><img class="shadow-lg img-fluid rounded-3 my-3" src="../assets/dgbox2.png"/></div>
+                        </div>
+                        <p class="lead fw-normal my-5 mb-0"> 
+                            A Hi-Fi linear Class AB audio amplifier board with a custom Class A preamplifier design for enhanced/3D stereo playback. It features Bluetooth v4.0 technology and consists of an impressively low THD rating.<br />
+                            Source code and technical details: <a href="https://github.com/DaGooseYT/dagoosebox">https://github.com/DaGooseYT/dagoosebox</a><br />
+                            Official video: <a href="https://youtu.be/7peg0jiGp7A">https://youtu.be/7peg0jiGp7A</a><br />
+                        </p>
+                        <p class="lead fw-normal my-5 mb-0"> 
+                            <strong>Background:</strong><br />
+                            With a complete desk setup, I had just about everything except desktop speakers. Since many of the pre-assembled options online are not of my taste in terms of amplifier design, I have decided to create my own that uses traditional audio amplification techniques. Creating a fully custom amplifier board would also allow me to tune it to the dedicated speakers it will be used with.<br /><br />
+                            <strong>Objectives:</strong><br />
+                            The main amplifier chip needed to be linear based. Since the amplifier won't be battery powered, efficiency didn't matter to me and I focused primarily on the sound fidelity of the application. Many modern amplifier designs consist of Class D amplifiers which are ideal for low-frequency playback (i.e. subwoofer amplifiers) due to their high efficiency, but aren't good for full-range freqency response particularly in the high-frequency ranges. 
+                            The primary reasoning for this is due to a poorly designed LC filter on the speaker outputs. When efficiency is not a crucial factor in audio amplifier design, linear is optimal since they do not convert the audio signals into PWM and back to linear, unlike the Class D amplifier counterpart. Converting analog to PWM and then back to analog just makes the amplification lower quality due to all of the signal conversions.<br />
+                            Since Bluetooth streaming is generally not high quality, there must have been an option to have wired AUX input to achieve the maximum fidelity possible. The AUX input on the KRC-86B does not pass through the ADC, DSP, and DAC on the Bluetooth chip which is good for high quality streaming. However, if you have a custom DSP profile on the Bluetooth firmware then this will not be applied to the AUX input.<br /><br />
+                            <strong>Challenges:</strong><br />
+                            While the KRC-86B Bluetooth module is easy to use and implement, it has some drawbacks. The on-board differential to single ended audio op-amp uses low value ceramic capacitors on the input audio decoupling filters which in turn has a higher frequency high-pass filter than desired. 
+                            In other words, the bass is weak by design. This can be fixed by replacing the audio decoupling capacitors on the inputs of the op-amp to a higher value such as 10uF. However, there isn't enough room to use film capacitors on the input which is usually preferred for higher quality audio applications.<br />
+                            The power switch utilizes the standby function on the main amplifier IC. It also controls the power to the KRC-86B and preamplifier regulator. While this design works, there is a huge pop at turn off.<br /><br />
+                            <strong>Other notes:</strong><br />
+                            The PCB is designed to go along with dedicated speakers and their enclosures. These have not been assembled yet.
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="bg-dark py-4 mt-auto">
+            <div class="container px-5">
+                <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+                    <div class="col-auto"><div class="small m-0 text-white">Copyright &copy; DaGoose 2020-2023</div></div>
+                    <div class="col-auto">
+                        <a class="fs-5 px-2 link-light" href="https://www.youtube.com/@DaGoose"><i class="bi-youtube"></i></a>
+                        <a class="fs-5 px-2 link-light" href="https://github.com/DaGooseYT"><i class="bi-github"></i></a>
+                        <a class="fs-5 px-2 link-light" href="mailto:goose@dagooseyt.com"><i class="bi-envelope-fill"></i></a>
+                        <a class="fs-5 px-2 link-light" href="https://discord.gg/PmcbXJVBNu"><i class="bi-discord"></i></a>
+                        <a class="fs-5 px-2 link-light" href="https://twitter.com/dagooseyt"><i class="bi-twitter"></i></a>
+                        <a class="fs-5 px-2 link-light" href="https://instagram.com/DaGooseYT"><i class="bi-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="js/scripts.js"></script>
+    </body>
+</html>

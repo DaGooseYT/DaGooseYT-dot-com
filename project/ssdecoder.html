@@ -1,0 +1,79 @@
+<!--Copyright (C) 2020-2023 DaGoose-->
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="DaGoose" />
+        <title>DaGoose - SSDecoder</title>
+        <link rel="icon" type="image/x-icon" href="../assets/favicon.ico" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <link href="../css/styles.css" rel="stylesheet" />
+    </head>
+    <body class="d-flex flex-column">
+        <main class="flex-shrink-0">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container px-5">
+                    <a class="navbar-brand" href="../index" >
+                        <img src="../assets/dagoose.png" height="45" class="d-inline-block align-middle mr-2">
+					</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <li class="nav-item"><a class="nav-link" href="../index">Home</a></li>
+							<li class="nav-item"><a class="nav-link" href="../projects">Projects</a></li>
+							<li class="nav-item"><a class="nav-link" href="https://shop.dagooseyt.com">Merch</a></li>
+                            <li class="nav-item"><a class="nav-link" href="../about">About</a></li>
+                            <li class="nav-item"><a class="nav-link" href="../contact">Contact</a></li>
+							<li class="nav-item"><a class="nav-link" href="../donate">Donate ❤️</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+			<section class="bg-white py-5">
+                <div class="container px-5">
+                    <div class="mb-5">
+                        <h1 class="text-center fw-bolder my-5">Surround Sound Decoder</h1>
+                        <div class="row gx-5 justify-content-center">
+                            <div class="col-lg-6 col-xl-6"><img class="shadow-lg img-fluid rounded-3 my-3" src="../assets/ssdecoder_lg.png"/></div>
+                        </div>
+                        <p class="lead fw-normal my-5 mb-0"> 
+                            A very simple two transistor surround sound decoder or vocal remover preamplifier based on two combined common collector and common emitter Class A audio amplifiers. This method of surround sound decoding simply isolates the out-of-phase audio in a stereo mix.<br />
+                            Source code and technical details: <a href="https://github.com/DaGooseYT/ss-decoder">https://github.com/DaGooseYT/ss-decoder</a><br />
+                            Official video: <a href="https://youtu.be/4wfMt4YOYYA">https://youtu.be/4wfMt4YOYYA</a><br />
+                        </p>
+                        <p class="lead fw-normal my-5 mb-0"> 
+                            <strong>Background:</strong><br />
+                            This design was actually discovered by accident in an attempt to create a Class AB amplifier from scratch. I thought this circuit would be useful in future applications as it only uses two generic NPN transistors along with some passive components, unlike the op-amp circuit alternatives.<br /><br />
+                            <strong>Objectives:</strong><br />
+                            This design needed to invert at least one channel in a stereo stream and then combine the stereo channels so that the center channel is eliminated. This process is called phase cancellation. The center channel is represented in both the left and right channels which means if one channel is inverted and then combined with the other channel, both channels are [assumed] equal in amplitude but opposite in phase which will cancel the center and only the out-of-phase musical content will be present.<br />
+                            Since vocals in a traditional stereo mix are panned to the center, it is safe to call this design a kareoke or vocal remover circuit. You could also call this circuit a surround sound decoder as early means of decoding surround sound audio used similar methods.<br /><br />
+                            <strong>Challenges:</strong><br />
+                            While this design is a low cost and low power solution, it doesn't have much gain. The two transistors are configured with unity gain and so the effective gain of the entire application will mostly depend on the gain capabilities of the main amplifier.<br />
+                            This design is also not protected from electromagnetic interference. It can pick up digital noise from cellular devices such as cell phone. To mitigate this, two 1KΩ resistors can be placed between the inputs and AGND. Regardless, this design is also subject to power supply noise.<br /><br />
+                            <strong>Other notes:</strong><br />
+                            This circuit has also been used in <a href="dagoosebox">DaGoose Box</a> and early revisions of <a href="smtpbts">SMT-PBTS</a>.
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="bg-dark py-4 mt-auto">
+            <div class="container px-5">
+                <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+                    <div class="col-auto"><div class="small m-0 text-white">Copyright &copy; DaGoose 2020-2023</div></div>
+                    <div class="col-auto">
+                        <a class="fs-5 px-2 link-light" href="https://www.youtube.com/@DaGoose"><i class="bi-youtube"></i></a>
+                        <a class="fs-5 px-2 link-light" href="https://github.com/DaGooseYT"><i class="bi-github"></i></a>
+                        <a class="fs-5 px-2 link-light" href="mailto:goose@dagooseyt.com"><i class="bi-envelope-fill"></i></a>
+                        <a class="fs-5 px-2 link-light" href="https://discord.gg/PmcbXJVBNu"><i class="bi-discord"></i></a>
+                        <a class="fs-5 px-2 link-light" href="https://twitter.com/dagooseyt"><i class="bi-twitter"></i></a>
+                        <a class="fs-5 px-2 link-light" href="https://instagram.com/DaGooseYT"><i class="bi-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
